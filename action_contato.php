@@ -49,7 +49,7 @@
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Locadora IFPR - Todos os direitos reservados</p>
+        <p>&copy; Rafael Lopes 2025 - Todos os direitos reservados</p>
     </footer>
 
 </body>
