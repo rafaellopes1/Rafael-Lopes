@@ -2,142 +2,174 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insaidersoccer</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insaidersoccer - Início</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #e8f5e9; /* Verde claro */
-            color: #2F4F4F;
-            line-height: 1.6;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9; /* Verde claro esportivo */
+      color: #2F4F4F;
+      line-height: 1.6;
+    }
 
-        header {
-            background-color: #1c1c1c;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+    header {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-        header h2 {
-            font-size: 2em;
-        }
+    header h2 {
+      font-size: 2em;
+    }
 
-        header nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    header nav {
+      margin-top: 10px;
+    }
 
-        header nav a:hover {
-            color: #8FBC8F;
-        }
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        /* Hero section */
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1601979031925-3ccdeeb81252?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
+    header nav a:hover {
+      color: #8FBC8F;
+    }
 
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
+    /* Hero Section */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-        .hero p {
-            font-size: 1.2em;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-        }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
 
-        main {
-            padding: 40px 20px;
-            text-align: center;
-        }
+    .hero p {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
 
-        .chuteiras {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
+    main {
+      padding: 40px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .chuteiras img {
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
+    .chuteiras {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
 
-        .chuteiras img:hover {
-            transform: scale(1.05);
-        }
+    .chuteira {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      width: 250px;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
 
-        footer {
-            background-color: #1c1c1c;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+    .chuteira:hover {
+      transform: scale(1.05);
+    }
+
+    .chuteira img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .chuteira h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+      color: #2F4F4F;
+    }
+
+    .chuteira p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h2>Insaidersoccer IFPR</h2>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="filiais.html">Loja</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <h2>Insaidersoccer IFPR</h2>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="filiais.html">Loja</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Chuteiras para quem vive o futebol</h1>
-        <p>Descubra os modelos mais modernos e conquiste o jogo com estilo e desempenho.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Bem-vindo à Insaidersoccer</h1>
+    <p>Encontre as melhores chuteiras para alcançar seu melhor desempenho em campo!</p>
+  </section>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <h2>Modelos em destaque</h2>
-        <p>Confira nossas chuteiras favoritas para você dominar o campo com classe!</p>
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Modelos em destaque</h2>
+    <p>Confira alguns dos nossos modelos mais populares entre atletas e apaixonados por futebol:</p>
 
-        <div class="chuteiras">
-            <img src="https://dcdn-us.mitiendanube.com/stores/001/825/551/products/chut-camp-pum-61-b867e6ae3d6db5fa9616880862907688-640-0.jpeg"
-                alt="Puma Future Z 1.1">
+    <div class="chuteiras">
+      <div class="chuteira">
+        <img src="https://dcdn-us.mitiendanube.com/stores/001/825/551/products/chut-camp-pum-61-b867e6ae3d6db5fa9616880862907688-640-0.jpeg" alt="Puma Future Z 1.1">
+        <h3>Puma Future Z 1.1</h3>
+        <p>Controle, leveza e desempenho para jogadores rápidos e criativos.</p>
+      </div>
 
-            <img src="https://thsportsstore.com/cdn/shop/files/v1.jpg?v=1720207365"
-                alt="Chuteira Nike Air Zoom cinza">
+      <div class="chuteira">
+        <img src="https://thsportsstore.com/cdn/shop/files/v1.jpg?v=1720207365" alt="Nike Air Zoom Mercurial">
+        <h3>Nike Air Zoom Mercurial</h3>
+        <p>Velocidade extrema com tecnologia Zoom Air. Design elegante e conforto máximo.</p>
+      </div>
 
-            <img src="https://acdn-us.mitiendanube.com/stores/003/050/283/products/62f5f0cb-d913-4e23-8733-045257f181311-a76aecd1f6c7b2b67216831982680855-1024-1024.jpeg"
-                alt="Adidas X SpeedPortal">
-        </div>
-    </main>
+      <div class="chuteira">
+        <img src="https://acdn-us.mitiendanube.com/stores/003/050/283/products/62f5f0cb-d913-4e23-8733-045257f181311-a76aecd1f6c7b2b67216831982680855-1024-1024.jpeg" alt="Adidas X SpeedPortal">
+        <h3>Adidas X SpeedPortal</h3>
+        <p>Projetada para explosões de velocidade. Ideal para quem busca agilidade em campo.</p>
+      </div>
+    </div>
+  </main>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; Rafael Lopes 2025 - Todos os direitos reservados</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; Rafael Lopes 2025 - Todos os direitos reservados</p>
+  </footer>
 
 </body>
 
