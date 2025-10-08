@@ -2,48 +2,122 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insaidersoccer IFPR - Contato</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Insaidersoccer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8f5e9;
+      color: #2F4F4F;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      color: #2F4F4F;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #2F4F4F;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1c1c1c;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h2>Insaidersoccer IFPR</h2>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="filiais.html">Filiais</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <h2>Insaidersoccer IFPR</h2>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="filiais.html">Loja</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <h1>Entre em Contato para escolher a chuteira em nosso catálogo</h1>
-        <form class="contato-form" action="https://script.google.com/macros/s/AKfycbx3jOK0rwQK1MU4NVPoqI3l7GMRI2OX2H2y257mJCacKaf-nfM5hoIBJYz2amv1xwyi/exec" method="POST">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+  <!-- Conteúdo principal -->
+  <main>
+    <h1>Fale com a gente</h1>
+    <p style="text-align: center;">Preencha o formulário abaixo para entrar em contato com a nossa equipe.</p>
 
-            <label for="Número">Número</label>
-            <input type="Número" id="Número" name="Número:" placeholder="Digite seu número" required>
+    <form action="#" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required>
 
-            <label for="Mensagem">Mensagem para o vendedor:</label>
-            <textarea id="Mensagem" name="Mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
 
-            <label for="data">Data do contato:</label>
-            <input type="date" id="data" name="data">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </main>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; Rafael Lopes 2025 - Todos os direitos reservados</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; Rafael Lopes 2025 - Todos os direitos reservados</p>
+  </footer>
 
 </body>
 
