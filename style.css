@@ -1,228 +1,149 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Tema escuro */
+body.tema-escuro {
+  background: #111;
+  color: #eee;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #004080;
-    color: white;
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #0d1b2a;
+  color: white;
 }
 
 header nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-main {
-    padding: 20px;
+header nav a:hover {
+  color: #00c3ff;
 }
 
-footer {
-    background-color: #f1f1f1;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-.carros {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.carros img {
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.contato-form {
-    max-width: 400px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
-}
-
-.contato-form label {
-    font-weight: bold;
-    color: #0d47a1;
-}
-
-.contato-form input,
-.contato-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contato-form button {
-    background: #0d47a1;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contato-form button:hover {
-    background: #1976d2;
-}
-
-.table-wrap {
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 0 12px 24px;
-}
-
-.dados-planilha {
-    width: 100%;
-    border-collapse: collapse;
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.dados-planilha th {
-    background: linear-gradient(90deg, #0d47a1, #1976d2);
-    color: #fff;
-    text-align: left;
-    padding: 10px;
-}
-
-.dados-planilha td {
-    padding: 8px 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.dados-planilha tr:nth-child(even) {
-    background: #f9f9f9;
-}
-
-.dados-planilha tr:hover {
-    background: #e3f2fd;
-}
-
-.info-msg {
-    text-align: center;
-    padding: 10px;
-}
-
-/* Conteúdo com scroll (já existente) */
-.conteudo-scroll {
-  max-height: 500px;
-  overflow-y: auto;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fff;
-}
-
-/* Blocos de conteúdo */
-.bloco-item {
-  margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #eee;
-  text-align: center;            /* centraliza títulos/descrição/elementos inline */
-}
-
-/* Imagem: centralizada e responsiva */
-.bloco-item img {
-    display: block;
-    margin: 12px auto;
-    max-width: 400px;   /* largura máxima controlada */
-    width: 100%;        /* ocupa até 100% do espaço permitido */
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-  
-
-/* Ajustes para telas muito pequenas */
-@media (max-width: 420px) {
-  .bloco-item img {
-    width: 100%;
-    margin: 10px 0;
-  }
-}
-
-.bloco-item h2 {
-  color: #0d47a1;
-  margin-bottom: 6px;
-}
-
-.bloco-item p {
-  margin: 6px 0;
-  text-align: center; /* descrição alinhada à esquerda para leitura; remova se preferir centralizar tudo */
-}
-/* ---------- Botão Toggle ---------- */
+/* Toggle do tema */
 .tema-toggle {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  width: 50px;
-  height: 26px;
-  background: #ddd;
+  width: 45px;
+  height: 22px;
+  background: #555;
   border-radius: 20px;
-  cursor: pointer;
   padding: 3px;
-  display: flex;
-  align-items: center;
-  transition: background 0.25s;
+  cursor: pointer;
 }
 
 .tema-toggle .bolinha {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background: white;
   border-radius: 50%;
-  transition: transform 0.25s;
-}
-/* ---------- TEMA ESCURO ---------- */
-.tema-escuro {
-  background-color: #0f1720;
-  color: #e9eef5;
+  transition: transform 0.3s;
 }
 
-.tema-escuro header {
-  background-color: #0b1220;
+body.tema-escuro .tema-toggle .bolinha {
+  transform: translateX(23px);
 }
 
-.tema-escuro footer {
-  background-color: #0b1220;
-  color: #e9eef5;
+/* Banner */
+.banner {
+  height: 320px;
+  background: url("https://images.unsplash.com/photo-1587302912306-f87e3985cddb") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.tema-escuro .conteudo-scroll {
-  background: #111821;
-  border-color: #2a3645;
+.banner-texto {
+  background: rgba(0,0,0,0.5);
+  padding: 20px 30px;
+  color: white;
+  border-radius: 10px;
 }
 
-.tema-escuro .bloco-item {
-  border-color: #2a3645;
+/* Cards de chuteiras */
+.catalogo {
+  padding: 40px;
 }
 
-.tema-escuro .bloco-item h2 {
-  color: #8db0ff;
+.catalogo h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
 
-/* Toggle no modo escuro */
-.tema-escuro .tema-toggle {
-  background: #374151;
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.tema-escuro .tema-toggle .bolinha {
-  transform: translateX(24px);
+.card {
+  background: white;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform .2s;
+}
+
+body.tema-escuro .card {
+  background: #222;
+  color: #eee;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 10px;
+  font-size: 14px;
+}
+
+/* Conteúdo dinâmico */
+.conteudo-scroll {
+  padding: 20px;
+}
+
+.bloco-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+body.tema-escuro .bloco-item {
+  background: #333;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #0d1b2a;
+  color: white;
 }
