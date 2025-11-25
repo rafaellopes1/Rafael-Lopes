@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluguel de Veículos</title>
+    <title>Locadora IFPR - Chuteiras</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Cabeçalho -->
-    <header>
+    <header class="header-esporte">
         <h2>Locadora IFPR</h2>
         <nav>
             <a href="index.html">Início</a>
@@ -19,97 +19,133 @@
             <a href="contato.html">Contato</a>
             <a href="planilha.html">Planilha</a>
         </nav>
-    <div id="tema-toggle" class="tema-toggle">
-      <div class="bolinha"></div>
-     </div>
+
+        <div id="tema-toggle" class="tema-toggle">
+            <div class="bolinha"></div>
+        </div>
     </header>
 
-    <main>
-        <h1>Bem-vindo à Locadora de Veículos</h1>
-        <p>Encontre o carro ideal para sua viagem, trabalho ou lazer.</p>
-      
-        <div id="conteudo" class="conteudo-scroll">
-          <p>Carregando conteúdo...</p>
+    <!-- Banner esportivo -->
+    <section class="banner">
+        <div class="banner-texto">
+            <h1>Chuteiras de Alta Performance</h1>
+            <p>Escolha o modelo ideal para dominar o jogo.</p>
         </div>
-      </main>
-      
-      <script>
-      const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxhfHL-aKgbfAeJEWWosLT29wyUmsG34km2syCRKUWjbUnT_hMx7MYgE63GRJB98I81/exec"; // substitua pela URL do seu Apps Script
-      
-      async function carregarConteudo() {
-        const container = document.getElementById('conteudo');
-        container.innerHTML = "<p>Carregando conteúdo...</p>";
-      
-        try {
-          const res = await fetch(SCRIPT_URL);
-          const dados = await res.json();
-          container.innerHTML = '';
-      
-          dados.forEach(item => {
-            const bloco = document.createElement('div');
-            bloco.className = 'bloco-item';
-      
-            const titulo = document.createElement('h2');
-            titulo.textContent = item.Titulo || '';
-            bloco.appendChild(titulo);
-      
-            const descricao = document.createElement('p');
-            descricao.textContent = item.Descricao || '';
-            bloco.appendChild(descricao);
-      
-           if (item.Url && item.Url.startsWith('http')) {
-  const youtubeRegex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
+    </section>
 
-  const match = item.Url.match(youtubeRegex);
-  if (match) {
-    const videoId = match[1];
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}`;
-    iframe.height = "315";
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-    iframe.setAttribute("allowfullscreen", true);
-    bloco.appendChild(iframe);
-  }
-  else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i) || item.Url.includes('unsplash')) {
-    const img = document.createElement('img');
-    img.src = item.Url;
-    img.alt = item.Título || 'Imagem';
-    bloco.appendChild(img);
-  }
-  else {
-    const link = document.createElement('a');
-    link.href = item.Url;
-    link.textContent = 'Ver mais';
-    bloco.appendChild(link);
-  }
-}
+    <!-- Seção de chuteiras fixas -->
+    <section class="catalogo">
+        <h2>Modelos em Destaque</h2>
 
-      
-            container.appendChild(bloco);
-          });
-        } catch (err) {
-          container.innerHTML = "<p>Erro ao carregar dados: " + err.message + "</p>";
+        <div class="cards-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1602333861848-d2d07c78929f" alt="Chuteira Nike Mercurial">
+                <h3>Nike Mercurial</h3>
+                <p>Velocidade e leveza para jogadores explosivos.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598554747430-67fd3e6f2dfd" alt="Chuteira Adidas Predator">
+                <h3>Adidas Predator</h3>
+                <p>Controle absoluto para dominar o meio campo.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1580716200988-cd4c8140504b" alt="Chuteira Puma Future">
+                <h3>Puma Future</h3>
+                <p>Conforto e precisão ajustados ao seu estilo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+        <h1>Conteúdos Dinâmicos</h1>
+        <p>Esses dados são carregados automaticamente da sua planilha do Google.</p>
+
+        <div id="conteudo" class="conteudo-scroll">
+            <p>Carregando conteúdo...</p>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxhfHL-aKgbfAeJEWWosLT29wyUmsG34km2syCRKUWjbUnT_hMx7MYgE63GRJB98I81/exec";
+
+        async function carregarConteudo() {
+            const container = document.getElementById('conteudo');
+            container.innerHTML = "<p>Carregando conteúdo...</p>";
+
+            try {
+                const res = await fetch(SCRIPT_URL);
+                const dados = await res.json();
+                container.innerHTML = '';
+
+                dados.forEach(item => {
+                    const bloco = document.createElement('div');
+                    bloco.className = 'bloco-item';
+
+                    const titulo = document.createElement('h2');
+                    titulo.textContent = item.Titulo || '';
+                    bloco.appendChild(titulo);
+
+                    const descricao = document.createElement('p');
+                    descricao.textContent = item.Descricao || '';
+                    bloco.appendChild(descricao);
+
+                    // Imagem, link ou vídeo
+                    if (item.Url && item.Url.startsWith('http')) {
+                        const youtubeRegex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
+                        const match = item.Url.match(youtubeRegex);
+
+                        if (match) {
+                            const videoId = match[1];
+                            const iframe = document.createElement('iframe');
+                            iframe.src = `https://www.youtube.com/embed/${videoId}`;
+                            iframe.height = "315";
+                            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+                            iframe.setAttribute("allowfullscreen", true);
+                            bloco.appendChild(iframe);
+                        }
+                        else if (item.Url.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
+                            const img = document.createElement('img');
+                            img.src = item.Url;
+                            img.alt = item.Titulo || 'Imagem';
+                            bloco.appendChild(img);
+                        }
+                        else {
+                            const link = document.createElement('a');
+                            link.href = item.Url;
+                            link.textContent = 'Ver mais';
+                            bloco.appendChild(link);
+                        }
+                    }
+
+                    container.appendChild(bloco);
+                });
+            } catch (err) {
+                container.innerHTML = "<p>Erro ao carregar dados: " + err.message + "</p>";
+            }
         }
-      }
-      
-      carregarConteudo();
-      </script>
-<script>
-  const toggle = document.getElementById("tema-toggle");
-  const body = document.body;
 
-  // Carregar tema salvo
-  let tema = localStorage.getItem("tema") || "tema-claro";
-  if (tema === "tema-escuro") body.classList.add("tema-escuro");
+        carregarConteudo();
+    </script>
 
-  toggle.addEventListener("click", () => {
-    body.classList.toggle("tema-escuro");
+    <script>
+        const toggle = document.getElementById("tema-toggle");
+        const body = document.body;
 
-    const ativo = body.classList.contains("tema-escuro");
-    localStorage.setItem("tema", ativo ? "tema-escuro" : "tema-claro");
-  });
-</script>
-    <!-- Rodapé -->
+        let tema = localStorage.getItem("tema") || "tema-claro";
+        if (tema === "tema-escuro") body.classList.add("tema-escuro");
+
+        toggle.addEventListener("click", () => {
+            body.classList.toggle("tema-escuro");
+            const ativo = body.classList.contains("tema-escuro");
+            localStorage.setItem("tema", ativo ? "tema-escuro" : "tema-claro");
+        });
+    </script>
+
     <footer>
         <p>&copy; 2025 RAFAEL LOPES - Todos os direitos reservados</p>
     </footer>
