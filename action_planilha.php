@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "nome" => $_POST["nome"] ?? "",
         "email" => $_POST["email"] ?? "",
         "mensagem" => $_POST["mensagem"] ?? ""
+        "data do contato" => $_POST["data do contato"] ?? ""
         // Adicione outros campos conforme necessário
     ];
 
